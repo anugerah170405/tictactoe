@@ -3,6 +3,7 @@ import { motion } from "motion/react"
 import { page } from "../animation/Page";
 import { SimpleButton } from "../components/SimpleButton";
 import { Toggle } from "../components/Toggle";
+import { playSound } from "../sound/PlaySound";
 
 
 
@@ -33,14 +34,13 @@ export function SettingsScreen({ dark, sound, font, onToggleDark, onToggleSound,
               <div className="relative">
                 <select
                   value={font}
-                  onChange={(e) => onChangeFont(e.target.value)}
+                  onChange={(e) => {onChangeFont(e.target.value); playSound("click", sound)}}
                   className="bg-gray-100 outline-none appearance-none rounded-lg text-gray-700 dark:text-gray-200 dark:bg-white/10 px-2 pr-7">
                   <option value="Outfit">Outfit</option>
                   <option value="Baloo 2">Baloo 2</option>
                   <option value="Fredoka">Fredoka</option>
                   <option value="Press Start 2P">Pixel</option>
                   <option value="Bungee">Bungee</option>
-
                 </select>
                 <ChevronDown
                   size={14} className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-gray-500dark:text-gray-400"
