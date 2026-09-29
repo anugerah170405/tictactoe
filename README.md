@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![tic](https://raw.githubusercontent.com/anugerah170405/assets/main/assets/images/1790660145847_tic.png)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A simple and interactive **Tic Tac Toe** game built with **React, TypeScript, and Vite**. The game supports two players who take turns placing their symbols on a 3×3 board. The first player to get three symbols in a row wins the game.
 
-## React Compiler
+## 🎮 Gameplay
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Two players take turns placing marks on the board.
+* **X always goes first.**
+* Get **3 of your symbols in a row** to win.
+* Rows, columns, and diagonals all count.
+* If the board is completely filled with no winner, the game ends in a **draw**.
+* Start a new round after the game ends.
 
-## Expanding the ESLint configuration
+## 🕹️ How to Play
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Player **X** makes the first move by selecting an empty cell.
+2. Player **O** takes the next turn.
+3. Players continue taking turns until one player gets three matching symbols in a row.
+4. A winning combination can be:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   * Horizontal
+   * Vertical
+   * Diagonal
+5. If all 9 cells are filled and neither player has won, the game is a draw.
+6. Restart the game to play another round.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **React**
+* **TypeScript**
+* **Vite**
+* **ESLint**
+* **CSS**
 
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/anugerah170405/tictactoe.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd tictactoe
 ```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at the local development URL provided by Vite, usually:
+
+```text
+http://localhost:5173
+```
+
+## 📌 Project
+
+This project is a small React game created to practice building interactive user interfaces, managing game state, handling user interactions, and implementing game-winning logic.
