@@ -67,6 +67,10 @@ The application will be available at the local development URL provided by Vite,
 http://localhost:5173
 ```
 
+## 👥 Authors
+- Walenwanko, Alva
+- Gari, Anugerah
+
 ## 📌 Project
 
 This project is a small React game created to practice building interactive user interfaces, managing game state, handling user interactions, and implementing game-winning logic.
